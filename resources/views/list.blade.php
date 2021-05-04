@@ -43,17 +43,17 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @if(count($users) == 0)
+                    @if(count($customs) == 0)
                         <tr>
                             <td colspan="2" class="text-center"> Account Not Found</td>
                         </tr>
                     @else
-                        @foreach($custom as $customs)
+                        @foreach($customs as $custom)
                             <tr>
-                                <td>{!! $users->firstname !!}</td>
-                                <td>{!! $users->lastname !!}</td>
+                                <td>{!! $customs->firstname !!}</td>
+                                <td>{!! $customs->lastname !!}</td>
                                 <td>
-                                    {!! Form::open(['method' => 'delete', 'url' => '#' . $users->id, 'id' => 'deleteForm']) !!}
+                                    {!! Form::open(['method' => 'delete', 'url' => '#' . $customs->id, 'id' => 'deleteForm']) !!}
                                     {!! Form::submit('delete', ['class' => 'btn btn-danger btn-sm']) !!}
                                     {!! Form::close() !!}
                                 </td>

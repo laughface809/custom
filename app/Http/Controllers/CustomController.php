@@ -17,8 +17,8 @@ public function welcome()
 
 public function list()
     {
-       $users = Custom::all();
-       return view('list', ['users' => $users]);
+       $customs = Custom::all();
+       return view('list', ['customs' => $customs]);
     }
 
 }
